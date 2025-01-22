@@ -8,17 +8,17 @@ import Foundation
 
 // 인증 서비스의 틀
 protocol ServiceType {
-    var authService: AuthenticatoinServiceType { get set }
+    var authService: AuthenticationServiceType { get set }
 }
 
 class Services: ServiceType {
-    var authService: AuthenticatoinServiceType
+    var authService: AuthenticationServiceType
     
     init() {
-        self.authService = AuthenticatoinService()
+        self.authService = AuthenticationService()
     }
 }
 
 class StubService: ServiceType {
-    var authService: AuthenticatoinServiceType = StubAuthenticatoinService()
+    var authService: AuthenticationServiceType = StubAuthenticationService()
 }
