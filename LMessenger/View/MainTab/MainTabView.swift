@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+    @EnvironmentObject var container: DIContainer
     @State private var selectedTab: MainTabType = .home
     
     var body: some View {
@@ -16,7 +18,7 @@ struct MainTabView: View {
                 Group {
                     switch tab {
                     case .home:
-                        HomeView(viewModel: .init())
+                        HomeView(viewModel: .init(container: container, userId: authViewModel.userId ?? "")) // 조금 더 실전이면 옵셔널을 홈 뷰 진입 전 한 번 더 체크할만 함
                     case .chat:
                         ChatListView()
                     case .phone:
@@ -37,6 +39,20 @@ struct MainTabView: View {
     }
 }
 
+//struct MainTabView_Previews: PreviewProvider {
+//    static let container = DIContainer(services: StubService())
+//    
+//    static var previews: some View {
+//        MainTabView()
+//            .environmentObject(self.container)
+//            .environmentObject(AuthenticationViewModel(container: self.container))
+//    }
+//}
+
 #Preview {
+    let container = DIContainer(services: StubService())
+    
     MainTabView()
+        .environmentObject(container)
+        .environmentObject(AuthenticationViewModel(container: container))
 }
