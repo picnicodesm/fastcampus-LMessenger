@@ -10,6 +10,8 @@
 		04123A3C2D5A273A008D12BA /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123A3B2D5A273A008D12BA /* MyProfileViewModel.swift */; };
 		04123A3E2D5A29D9008D12BA /* MyProfileMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123A3D2D5A29D9008D12BA /* MyProfileMenuType.swift */; };
 		04123A402D5A2DD4008D12BA /* MyProfileDescEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123A3F2D5A2DD4008D12BA /* MyProfileDescEditView.swift */; };
+		04123A4B2D5AFA2D008D12BA /* PhotoPickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123A4A2D5AFA2D008D12BA /* PhotoPickerService.swift */; };
+		04123A4E2D5AFB18008D12BA /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123A4D2D5AFB18008D12BA /* PhotoImage.swift */; };
 		0465609B2D51DC9400EEA6AE /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465609A2D51DC9400EEA6AE /* Phase.swift */; };
 		0465609E2D51DEAE00EEA6AE /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465609D2D51DEAE00EEA6AE /* PlaceholderView.swift */; };
 		046560A02D51DEE000EEA6AE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465609F2D51DEE000EEA6AE /* LoadingView.swift */; };
@@ -77,6 +79,8 @@
 		04123A3B2D5A273A008D12BA /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
 		04123A3D2D5A29D9008D12BA /* MyProfileMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMenuType.swift; sourceTree = "<group>"; };
 		04123A3F2D5A2DD4008D12BA /* MyProfileDescEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileDescEditView.swift; sourceTree = "<group>"; };
+		04123A4A2D5AFA2D008D12BA /* PhotoPickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerService.swift; sourceTree = "<group>"; };
+		04123A4D2D5AFB18008D12BA /* PhotoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImage.swift; sourceTree = "<group>"; };
 		0465609A2D51DC9400EEA6AE /* Phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
 		0465609D2D51DEAE00EEA6AE /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		0465609F2D51DEE000EEA6AE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -153,6 +157,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04123A4C2D5AFB07008D12BA /* PhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				04123A4A2D5AFA2D008D12BA /* PhotoPickerService.swift */,
+				04123A4D2D5AFB18008D12BA /* PhotoImage.swift */,
+			);
+			path = PhotoPicker;
+			sourceTree = "<group>";
+		};
 		0465609C2D51DEA000EEA6AE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +202,7 @@
 		048460892D40AA7000617EBF /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				04123A4C2D5AFB07008D12BA /* PhotoPicker */,
 				0484608A2D40AA7900617EBF /* Services.swift */,
 				048460992D40B09800617EBF /* AuthenticatoinService.swift */,
 				048460AB2D40C7DA00617EBF /* ServiceError.swift */,
@@ -524,6 +538,7 @@
 				048460D42D43608C00617EBF /* DBError.swift in Sources */,
 				048460AA2D40C79700617EBF /* User.swift in Sources */,
 				04123A402D5A2DD4008D12BA /* MyProfileDescEditView.swift in Sources */,
+				04123A4B2D5AFA2D008D12BA /* PhotoPickerService.swift in Sources */,
 				048460BE2D4330C600617EBF /* MainTabType.swift in Sources */,
 				0484609E2D40B2A000617EBF /* LoginIntroView.swift in Sources */,
 				048460D22D43604E00617EBF /* UserObject.swift in Sources */,
@@ -542,6 +557,7 @@
 				723ABD892AFFF1B800C260F1 /* AuthenticatedView.swift in Sources */,
 				048460962D40AEE200617EBF /* AppDelegate.swift in Sources */,
 				048460C52D4331D100617EBF /* ChatListView.swift in Sources */,
+				04123A4E2D5AFB18008D12BA /* PhotoImage.swift in Sources */,
 				048460B52D420BEC00617EBF /* SHA256.swift in Sources */,
 				048460C32D4331C400617EBF /* HomeView.swift in Sources */,
 				04123A3C2D5A273A008D12BA /* MyProfileViewModel.swift in Sources */,
