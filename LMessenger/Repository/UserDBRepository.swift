@@ -109,7 +109,7 @@ class UserDBRepository: UserDBRepositoryType {
                 return Just([]).setFailureType(to: DBError.self).eraseToAnyPublisher()
                 // Just는 에러 타입이 Never라서 명시적으로 실패 타입을 지정해주기 위해 setFailureType 사용
             } else {
-                return Fail(error: .invalidType).eraseToAnyPublisher()
+                return Fail(error: .invalidatedType).eraseToAnyPublisher()
             }
         }
         .eraseToAnyPublisher()

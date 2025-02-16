@@ -21,7 +21,7 @@ struct MainTabView: View {
                     case .home:
                         HomeView(viewModel: .init(container: container, navigationRouter: navigationRouter, userId: authViewModel.userId ?? "")) // 조금 더 실전이면 옵셔널을 홈 뷰 진입 전 한 번 더 체크할만 함
                     case .chat:
-                        ChatListView()
+                        ChatListView(viewModel: .init(container: container, userId: authViewModel.userId ?? ""))
                     case .phone:
                         Color.blackFix
                     }
