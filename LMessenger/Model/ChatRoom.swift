@@ -1,5 +1,5 @@
 //
-//  ChatRoomModel.swift
+//  ChatRoom.swift
 //  LMessenger
 //
 //
