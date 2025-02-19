@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04062D772D65BECC00A5DED7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 04062D762D65BECC00A5DED7 /* FirebaseMessaging */; };
+		04062D792D65FB2400A5DED7 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04062D782D65FB2400A5DED7 /* PushNotificationService.swift */; };
 		04123A3C2D5A273A008D12BA /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123A3B2D5A273A008D12BA /* MyProfileViewModel.swift */; };
 		04123A3E2D5A29D9008D12BA /* MyProfileMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123A3D2D5A29D9008D12BA /* MyProfileMenuType.swift */; };
 		04123A402D5A2DD4008D12BA /* MyProfileDescEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123A3F2D5A2DD4008D12BA /* MyProfileDescEditView.swift */; };
@@ -110,6 +112,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04062D782D65FB2400A5DED7 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 		04123A3B2D5A273A008D12BA /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
 		04123A3D2D5A29D9008D12BA /* MyProfileMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMenuType.swift; sourceTree = "<group>"; };
 		04123A3F2D5A2DD4008D12BA /* MyProfileDescEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileDescEditView.swift; sourceTree = "<group>"; };
@@ -200,6 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04062D772D65BECC00A5DED7 /* FirebaseMessaging in Frameworks */,
 				048460CA2D433A8800617EBF /* FirebaseDatabase in Frameworks */,
 				04123A502D5B12BC008D12BA /* FirebaseStorage in Frameworks */,
 				04123A522D5B12BC008D12BA /* FirebaseStorageCombine-Community in Frameworks */,
@@ -365,6 +369,7 @@
 				04123A562D5B13D0008D12BA /* UploadService.swift */,
 				04123A792D5C70C1008D12BA /* ChatRoomService.swift */,
 				04ED73F02D646879003F0D25 /* ChatService.swift */,
+				04062D782D65FB2400A5DED7 /* PushNotificationService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -755,6 +760,7 @@
 				048460C32D4331C400617EBF /* HomeView.swift in Sources */,
 				04123A3C2D5A273A008D12BA /* MyProfileViewModel.swift in Sources */,
 				04123A742D5C68F5008D12BA /* OtherProfileMenuType.swift in Sources */,
+				04062D792D65FB2400A5DED7 /* PushNotificationService.swift in Sources */,
 				048460B62D420BEC00617EBF /* RandomNonceString.swift in Sources */,
 				04123A572D5B13D0008D12BA /* UploadService.swift in Sources */,
 				048460D62D43626E00617EBF /* Constant.swift in Sources */,
@@ -1136,6 +1142,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		04062D762D65BECC00A5DED7 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 048460922D40AE8E00617EBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		04123A4F2D5B12BC008D12BA /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 048460922D40AE8E00617EBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
