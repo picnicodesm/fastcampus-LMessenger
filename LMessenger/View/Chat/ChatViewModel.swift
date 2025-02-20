@@ -77,17 +77,30 @@ class ChatViewModel: ObservableObject {
                 self?.myUser = myUser
                 self?.otherUser = otherUser
             }.store(in: &subscriptions)
+            
         case let .addChat(message):
             let chat: Chat = .init(chatId: UUID().uuidString, userId: myUserId, message: message, date: Date())
             container.services.chatService.addChat(chat, to: chatRoomdId)
                 .flatMap { chat in
-                    self.container.services.chatRoomService.updateChatRoomLastMessage(chatRoomId: self.chatRoomdId, myUserId: self.myUserId, myUserName: self.myUser?.name ?? "", otherUserId: self.otherUserId, lastMessage: chat.lastMessage)
+                    self.container.services.chatRoomService.updateChatRoomLastMessage(
+                        chatRoomId: self.chatRoomdId,
+                        myUserId: self.myUserId,
+                        myUserName: self.myUser?.name ?? "",
+                        otherUserId: self.otherUserId,
+                        lastMessage: chat.lastMessage
+                    )
                 }
+            // notification 보내는 부분. 업데이트 필요
+//                .flatMap { _ -> AnyPublisher<Bool, Never> in
+//                    guard let fcmToken = self.otherUser?.fcmToken else { return Empty().eraseToAnyPublisher() }
+//                    return self.container.services.pushNotificationService.sendPushNotification(fcmToken: fcmToken, message: message)
+//                }
                 .sink { completion in
                     
                 } receiveValue: { [weak self] _ in
                     self?.message = ""
                 }.store(in: &subscriptions)
+            
         case let .uploadImage(pickerItem):
             /*
              1. data화
@@ -107,6 +120,11 @@ class ChatViewModel: ObservableObject {
                 .flatMap { chat in
                     self.container.services.chatRoomService.updateChatRoomLastMessage(chatRoomId: self.chatRoomdId, myUserId: self.myUserId, myUserName: self.myUser?.name ?? "", otherUserId: self.otherUserId, lastMessage: chat.lastMessage)
                 }
+            // notification 보내는 부분. 업데이트 필요
+//                .flatMap { _ -> AnyPublisher<Bool, Never> in
+//                    guard let fcmToken = self.otherUser?.fcmToken else { return Empty().eraseToAnyPublisher() }
+//                    return self.container.services.pushNotificationService.sendPushNotification(fcmToken: fcmToken, message: "사진")
+//                }
                 .sink { _ in
                     
                 } receiveValue: { _ in

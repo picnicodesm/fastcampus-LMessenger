@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		04062D772D65BECC00A5DED7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 04062D762D65BECC00A5DED7 /* FirebaseMessaging */; };
 		04062D792D65FB2400A5DED7 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04062D782D65FB2400A5DED7 /* PushNotificationService.swift */; };
+		04062D822D67C95900A5DED7 /* PushNotificationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04062D812D67C95900A5DED7 /* PushNotificationProvider.swift */; };
+		04062D842D67C9F000A5DED7 /* PushObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04062D832D67C9F000A5DED7 /* PushObject.swift */; };
 		04123A3C2D5A273A008D12BA /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123A3B2D5A273A008D12BA /* MyProfileViewModel.swift */; };
 		04123A3E2D5A29D9008D12BA /* MyProfileMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123A3D2D5A29D9008D12BA /* MyProfileMenuType.swift */; };
 		04123A402D5A2DD4008D12BA /* MyProfileDescEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123A3F2D5A2DD4008D12BA /* MyProfileDescEditView.swift */; };
@@ -113,6 +115,8 @@
 
 /* Begin PBXFileReference section */
 		04062D782D65FB2400A5DED7 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
+		04062D812D67C95900A5DED7 /* PushNotificationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationProvider.swift; sourceTree = "<group>"; };
+		04062D832D67C9F000A5DED7 /* PushObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushObject.swift; sourceTree = "<group>"; };
 		04123A3B2D5A273A008D12BA /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
 		04123A3D2D5A29D9008D12BA /* MyProfileMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMenuType.swift; sourceTree = "<group>"; };
 		04123A3F2D5A2DD4008D12BA /* MyProfileDescEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileDescEditView.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				04123A542D5B1304008D12BA /* UploadProvider.swift */,
+				04062D812D67C95900A5DED7 /* PushNotificationProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -466,7 +471,6 @@
 		048460CB2D435F1200617EBF /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				048460D02D43604400617EBF /* DTO */,
 				048460CC2D435F4300617EBF /* UserDBRepository.swift */,
 				048460D32D43608C00617EBF /* DBError.swift */,
 				04123A752D5C6AF5008D12BA /* ChatRoomDBRepository.swift */,
@@ -481,6 +485,7 @@
 				048460D12D43604E00617EBF /* UserObject.swift */,
 				04123A772D5C6B49008D12BA /* ChatRoomObject.swift */,
 				04ED73EE2D6467B8003F0D25 /* ChatObject.swift */,
+				04062D832D67C9F000A5DED7 /* PushObject.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 				048460A82D40C78C00617EBF /* Model */,
 				048460892D40AA7000617EBF /* Service */,
 				048460CB2D435F1200617EBF /* Repository */,
+				048460D02D43604400617EBF /* DTO */,
 				04123A532D5B12F0008D12BA /* Provider */,
 				048460B22D420BA700617EBF /* Util */,
 				72E4BEFA2B00B871007A1060 /* Extension */,
@@ -763,6 +769,7 @@
 				04062D792D65FB2400A5DED7 /* PushNotificationService.swift in Sources */,
 				048460B62D420BEC00617EBF /* RandomNonceString.swift in Sources */,
 				04123A572D5B13D0008D12BA /* UploadService.swift in Sources */,
+				04062D842D67C9F000A5DED7 /* PushObject.swift in Sources */,
 				048460D62D43626E00617EBF /* Constant.swift in Sources */,
 				04123A842D5C7556008D12BA /* ChatView.swift in Sources */,
 				72E4BEFC2B00B871007A1060 /* Color+Extension.swift in Sources */,
@@ -787,6 +794,7 @@
 				04ED73F12D646879003F0D25 /* ChatService.swift in Sources */,
 				04123A7A2D5C70C1008D12BA /* ChatRoomService.swift in Sources */,
 				04123A872D5C755F008D12BA /* SearchView.swift in Sources */,
+				04062D822D67C95900A5DED7 /* PushNotificationProvider.swift in Sources */,
 				048460A02D40B2A900617EBF /* MainTabView.swift in Sources */,
 				04123A3E2D5A29D9008D12BA /* MyProfileMenuType.swift in Sources */,
 				04ED73DF2D6442BE003F0D25 /* ChatViewModel.swift in Sources */,
