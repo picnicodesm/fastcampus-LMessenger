@@ -49,6 +49,9 @@
 		046560AB2D51E27C00EEA6AE /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046560AA2D51E27C00EEA6AE /* ContactService.swift */; };
 		0472ACD02D6839FF0085A7B7 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472ACCF2D6839FF0085A7B7 /* SearchViewModel.swift */; };
 		0472ACD22D683B350085A7B7 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472ACD12D683B350085A7B7 /* SearchBar.swift */; };
+		0472ACD52D68529E0085A7B7 /* Search.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0472ACD32D68529E0085A7B7 /* Search.xcdatamodeld */; };
+		0472ACD82D6853730085A7B7 /* SearchDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472ACD72D6853730085A7B7 /* SearchDataController.swift */; };
+		0472ACDA2D6856430085A7B7 /* RecentSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472ACD92D6856430085A7B7 /* RecentSearchView.swift */; };
 		048460852D40A93100617EBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048460842D40A93100617EBF /* LaunchScreen.storyboard */; };
 		048460882D40AA4700617EBF /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048460872D40AA4700617EBF /* DIContainer.swift */; };
 		0484608B2D40AA7900617EBF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484608A2D40AA7900617EBF /* Services.swift */; };
@@ -155,6 +158,9 @@
 		046560AA2D51E27C00EEA6AE /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
 		0472ACCF2D6839FF0085A7B7 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		0472ACD12D683B350085A7B7 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		0472ACD42D68529E0085A7B7 /* Search.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Search.xcdatamodel; sourceTree = "<group>"; };
+		0472ACD72D6853730085A7B7 /* SearchDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataController.swift; sourceTree = "<group>"; };
+		0472ACD92D6856430085A7B7 /* RecentSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchView.swift; sourceTree = "<group>"; };
 		048460832D40A8CF00617EBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		048460842D40A93100617EBF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		048460872D40AA4700617EBF /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -329,6 +335,7 @@
 				04123A862D5C755F008D12BA /* SearchView.swift */,
 				0472ACD12D683B350085A7B7 /* SearchBar.swift */,
 				0472ACCF2D6839FF0085A7B7 /* SearchViewModel.swift */,
+				0472ACD92D6856430085A7B7 /* RecentSearchView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -354,11 +361,20 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		0472ACD62D68535F0085A7B7 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0472ACD72D6853730085A7B7 /* SearchDataController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		048460862D40AA3A00617EBF /* General */ = {
 			isa = PBXGroup;
 			children = (
 				04123A7D2D5C73EC008D12BA /* Navigation */,
 				0465609C2D51DEA000EEA6AE /* View */,
+				0472ACD62D68535F0085A7B7 /* Search */,
 				048460872D40AA4700617EBF /* DIContainer.swift */,
 				048460D52D43626E00617EBF /* Constant.swift */,
 				0465609A2D51DC9400EEA6AE /* Phase.swift */,
@@ -582,6 +598,7 @@
 				048460842D40A93100617EBF /* LaunchScreen.storyboard */,
 				723ABD8A2AFFF1B900C260F1 /* Assets.xcassets */,
 				723ABDB12AFFF1F000C260F1 /* Colors.xcassets */,
+				0472ACD32D68529E0085A7B7 /* Search.xcdatamodeld */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -752,11 +769,13 @@
 				046560AB2D51E27C00EEA6AE /* ContactService.swift in Sources */,
 				048460C72D43337200617EBF /* HomeViewModel.swift in Sources */,
 				04123A5C2D5B1D13008D12BA /* ImageCacheService.swift in Sources */,
+				0472ACD82D6853730085A7B7 /* SearchDataController.swift in Sources */,
 				0484608F2D40AB1400617EBF /* AuthenticationViewModel.swift in Sources */,
 				04123A762D5C6AF5008D12BA /* ChatRoomDBRepository.swift in Sources */,
 				0465609E2D51DEAE00EEA6AE /* PlaceholderView.swift in Sources */,
 				046560A42D51DFFB00EEA6AE /* HomeModalDestination.swift in Sources */,
 				0484608B2D40AA7900617EBF /* Services.swift in Sources */,
+				0472ACD52D68529E0085A7B7 /* Search.xcdatamodeld in Sources */,
 				04123A722D5C663D008D12BA /* OtherProfileViewModel.swift in Sources */,
 				04ED73E72D6447FE003F0D25 /* ChatItemView.swift in Sources */,
 				048460CF2D435F6800617EBF /* UserService.swift in Sources */,
@@ -767,6 +786,7 @@
 				0472ACD22D683B350085A7B7 /* SearchBar.swift in Sources */,
 				723ABD892AFFF1B800C260F1 /* AuthenticatedView.swift in Sources */,
 				04123A812D5C7416008D12BA /* NavigationRouter.swift in Sources */,
+				0472ACDA2D6856430085A7B7 /* RecentSearchView.swift in Sources */,
 				048460962D40AEE200617EBF /* AppDelegate.swift in Sources */,
 				048460C52D4331D100617EBF /* ChatListView.swift in Sources */,
 				04123A4E2D5AFB18008D12BA /* PhotoImage.swift in Sources */,
@@ -1189,6 +1209,19 @@
 			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		0472ACD32D68529E0085A7B7 /* Search.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0472ACD42D68529E0085A7B7 /* Search.xcdatamodel */,
+			);
+			currentVersion = 0472ACD42D68529E0085A7B7 /* Search.xcdatamodel */;
+			path = Search.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 723ABD7B2AFFF1B800C260F1 /* Project object */;
 }
