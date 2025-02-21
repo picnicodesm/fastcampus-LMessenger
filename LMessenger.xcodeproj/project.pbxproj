@@ -47,6 +47,8 @@
 		046560A72D51E0AC00EEA6AE /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046560A62D51E0AC00EEA6AE /* MyProfileView.swift */; };
 		046560A92D51E0B200EEA6AE /* OtherProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046560A82D51E0B200EEA6AE /* OtherProfileView.swift */; };
 		046560AB2D51E27C00EEA6AE /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046560AA2D51E27C00EEA6AE /* ContactService.swift */; };
+		0472ACD02D6839FF0085A7B7 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472ACCF2D6839FF0085A7B7 /* SearchViewModel.swift */; };
+		0472ACD22D683B350085A7B7 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472ACD12D683B350085A7B7 /* SearchBar.swift */; };
 		048460852D40A93100617EBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048460842D40A93100617EBF /* LaunchScreen.storyboard */; };
 		048460882D40AA4700617EBF /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048460872D40AA4700617EBF /* DIContainer.swift */; };
 		0484608B2D40AA7900617EBF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484608A2D40AA7900617EBF /* Services.swift */; };
@@ -151,6 +153,8 @@
 		046560A62D51E0AC00EEA6AE /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		046560A82D51E0B200EEA6AE /* OtherProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileView.swift; sourceTree = "<group>"; };
 		046560AA2D51E27C00EEA6AE /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
+		0472ACCF2D6839FF0085A7B7 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		0472ACD12D683B350085A7B7 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		048460832D40A8CF00617EBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		048460842D40A93100617EBF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		048460872D40AA4700617EBF /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -323,6 +327,8 @@
 			isa = PBXGroup;
 			children = (
 				04123A862D5C755F008D12BA /* SearchView.swift */,
+				0472ACD12D683B350085A7B7 /* SearchBar.swift */,
+				0472ACCF2D6839FF0085A7B7 /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -730,6 +736,7 @@
 				04ED73E12D6444AD003F0D25 /* Chat.swift in Sources */,
 				048460AA2D40C79700617EBF /* User.swift in Sources */,
 				04123A402D5A2DD4008D12BA /* MyProfileDescEditView.swift in Sources */,
+				0472ACD02D6839FF0085A7B7 /* SearchViewModel.swift in Sources */,
 				04123A4B2D5AFA2D008D12BA /* PhotoPickerService.swift in Sources */,
 				048460BE2D4330C600617EBF /* MainTabType.swift in Sources */,
 				04123A5A2D5B1450008D12BA /* UploadSourceType.swift in Sources */,
@@ -757,6 +764,7 @@
 				048460CD2D435F4300617EBF /* UserDBRepository.swift in Sources */,
 				048460882D40AA4700617EBF /* DIContainer.swift in Sources */,
 				04ED73EB2D644D9D003F0D25 /* KeyboardToolbar.swift in Sources */,
+				0472ACD22D683B350085A7B7 /* SearchBar.swift in Sources */,
 				723ABD892AFFF1B800C260F1 /* AuthenticatedView.swift in Sources */,
 				04123A812D5C7416008D12BA /* NavigationRouter.swift in Sources */,
 				048460962D40AEE200617EBF /* AppDelegate.swift in Sources */,

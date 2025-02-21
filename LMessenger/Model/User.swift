@@ -6,7 +6,7 @@
 
 import Foundation
 
-struct User {
+struct User: Identifiable {
     var id: String
     var name: String
     var phoneNumber: String?
