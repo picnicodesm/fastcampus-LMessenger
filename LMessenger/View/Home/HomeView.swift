@@ -23,6 +23,8 @@ struct HomeView: View {
                         OtherProfileView(viewModel: .init(container: container, userId: userId)) { otherUserInfo in
                             viewModel.send(action: .goToChat(otherUserInfo))
                         }
+                    case .setting:
+                        SettingView(viewModel: .init())
                     }
                 }
                 .navigationDestination(for: NavigationDestination.self) {
@@ -44,14 +46,14 @@ struct HomeView: View {
         case .success:
             loadedView
                 .toolbar {
-                    Image("bookmark")
-                    Image("notifications")
-                    Image("person_add")
-                    Button {
-                        // TODO:
-                    } label: {
-                        Image("setting")
-                    }
+                        Image("bookmark")
+                        Image("notifications")
+                        Image("person_add")
+                        Button {
+                            viewModel.send(action: .presentView(.setting))
+                        } label: {
+                            Image("settings", label: Text("설정"))
+                        }
                 }
         case .fail:
             ErrorView()
@@ -64,9 +66,9 @@ struct HomeView: View {
                 .padding(.bottom, 30)
             
             NavigationLink(value: NavigationDestination.search(userId: viewModel.userId)) {
-              SearchButton()
+                SearchButton()
             }
-            .padding(.bottom, 24) 
+            .padding(.bottom, 24)
             
             HStack {
                 Text("친구")
@@ -75,7 +77,7 @@ struct HomeView: View {
                 Spacer()
             }
             .padding(.horizontal, 30)
-        
+            
             if viewModel.users.isEmpty {
                 Spacer(minLength: 89)
                 emptyView
@@ -83,7 +85,7 @@ struct HomeView: View {
                 LazyVStack {
                     ForEach(viewModel.users, id: \.id) { user in
                         Button {
-                            viewModel.send(action: .presentOtherProfileView(user.id))
+                            viewModel.send(action: .presentView(.otherProfile(user.id)))
                         } label: {
                             HStack(spacing: 8) {
                                 Image("person")
@@ -123,7 +125,7 @@ struct HomeView: View {
         }
         .padding(.horizontal, 30)
         .onTapGesture {
-            viewModel.send(action: .presentMyProfileView)
+            viewModel.send(action: .presentView(.myProfile))
         }
     }
     var emptyView: some View {
