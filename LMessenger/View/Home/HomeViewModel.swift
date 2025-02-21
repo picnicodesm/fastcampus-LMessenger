@@ -12,8 +12,9 @@ class HomeViewModel: ObservableObject {
     enum Action {
         case load
         case requestContacts
-        case presentMyProfileView
-        case presentOtherProfileView(String)
+//        case presentMyProfileView
+//        case presentOtherProfileView(String)
+        case presentView(HomeModalDestination)
         case goToChat(User)
     }
     
@@ -72,11 +73,13 @@ class HomeViewModel: ObservableObject {
                     self?.users = users
                 }.store(in: &subscriptions)
     
-        case .presentMyProfileView:
-            modalDestination = .myProfile
-            
-        case let .presentOtherProfileView(userId):
-            modalDestination = .otherProfile(userId)
+//        case .presentMyProfileView:
+//            modalDestination = .myProfile
+//            
+//        case let .presentOtherProfileView(userId):
+//            modalDestination = .otherProfile(userId)
+        case let .presentView(destination):
+            modalDestination = destination
             
         case let .goToChat(otherUser):
             // ChatRooms/myUserId/otherUserId 를 검색하면 채팅방의 존재를 알 수 있음.
