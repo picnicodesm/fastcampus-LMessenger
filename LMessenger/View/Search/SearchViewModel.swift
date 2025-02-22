@@ -10,6 +10,7 @@ import Combine
 class SearchViewModel: ObservableObject {
     
     enum Action {
+        case setSearchText(String?)
         case requestQuery(String)
         case clearSearchResult
         case clearSearchText
@@ -46,6 +47,9 @@ class SearchViewModel: ObservableObject {
     
     func send(action: Action) {
         switch action {
+        case let .setSearchText(text):
+            searchText = text ?? ""
+            
         case let .requestQuery(query):
             container.services.userService.filterUsers(with: query, userId: userId)
                 .sink { completion in
@@ -65,6 +69,6 @@ class SearchViewModel: ObservableObject {
         case .pop:
             container.navigationRouter.pop()
         }
-        
+
     }
 }

@@ -93,7 +93,7 @@ class DBReference: DBReferenceType {
         let path = getPath(key: key, path: path)
         
         return Future { [weak self] promise in
-            self?.db.child(DBKey.Users)
+            self?.db.child(path)
                 .queryOrdered(byChild: "name")
                 .queryStarting(atValue: queryString)
                 .queryEnding(atValue: queryString + "\u{f8ff}") // 유니코드의 제일 마지막 문자를 적어줘야 정상적인 결과가 나옵니다.

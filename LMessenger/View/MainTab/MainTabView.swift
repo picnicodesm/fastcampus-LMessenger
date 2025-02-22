@@ -51,7 +51,6 @@ struct MainTabView: View {
 
 #Preview {
     let container = DIContainer(services: StubService())
-    let navigationRouter: NavigationRouter = .init()
     
     MainTabView()
         .environmentObject(container)

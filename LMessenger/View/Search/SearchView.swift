@@ -10,13 +10,17 @@ import SwiftUI
 struct SearchView: View {
     @Environment(\.managedObjectContext) var objectContext
     @StateObject var viewModel: SearchViewModel
+    @AccessibilityFocusState var isSearchBarFocused: Bool
     
     var body: some View {
         VStack {
             topView
             
             if viewModel.searchResults.isEmpty {
-                RecentSearchView()
+                RecentSearchView { text in
+                    viewModel.send(action: .setSearchText(text))
+                    isSearchBarFocused = true
+                }
             } else {
                 List {
                     ForEach(viewModel.searchResults) { result in
@@ -51,6 +55,7 @@ struct SearchView: View {
             SearchBar(text: $viewModel.searchText, shouldBecomeFirstResponder: $viewModel.shouldBecomeFirstresponder) {
                 setSearchResultWithContext()
             }
+            .accessibilityFocused($isSearchBarFocused)
             
             Button {
                 viewModel.send(action: .clearSearchText)
