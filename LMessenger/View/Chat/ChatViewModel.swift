@@ -107,7 +107,7 @@ class ChatViewModel: ObservableObject {
              1. data화
              2. uploadService > storage
              3. chat > add url
-             */4
+             */
             guard let pickerItem else { return }
             
             container.services.photoPickerService.loadTransferable(from: pickerItem)

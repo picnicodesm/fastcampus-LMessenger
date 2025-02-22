@@ -32,9 +32,9 @@ enum ChatItemDirection {
     var overlayImage: Image {
         switch self {
         case .left:
-            return Image("bubble_tail-left")
+            return Image(decorative: "bubble_tail-left")
         case .right:
-            return Image("bubble_tail-right")
+            return Image(decorative: "bubble_tail-right")
         }
     }
 }
