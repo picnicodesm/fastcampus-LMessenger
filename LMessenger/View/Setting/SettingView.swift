@@ -9,7 +9,7 @@ import SwiftUI
 struct SettingView: View {
     @AppStorage(AppStorageType.Appearance) var appearance: Int = UserDefaults.standard.integer(forKey: AppStorageType.Appearance) // 해당 프로퍼티로 userDefault의 값을 읽고 쓸 수 있는 상태가 됨.
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var appearanceController: AppearanceController
+    @EnvironmentObject var container: DIContainer
     @StateObject var viewModel: SettingViewModel
     
     var body: some View {
@@ -20,7 +20,7 @@ struct SettingView: View {
                         ForEach(section.settings) { setting in
                             Button {
                                 if let a = setting.item as? AppearanceType {
-                                    appearanceController.changeAppearance(a)
+                                    container.appearanceController.changeAppearance(a)
                                     appearance = a.rawValue
                                 }
                             } label: {
@@ -42,7 +42,7 @@ struct SettingView: View {
                 }
             }
         }
-        .preferredColorScheme(appearanceController.appearance.colorScheme)
+        .preferredColorScheme(container.appearanceController.appearance.colorScheme)
     }
 }
 

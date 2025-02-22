@@ -61,7 +61,7 @@ class UserService: UserServiceType {
     }
     
     func updateFCMToken(userId: String, fcmToken: String) -> AnyPublisher<Void, ServiceError> {
-        dbRepository.updateUser(id: userId, key: "fcmToken", value: fcmToken)
+        dbRepository.updateUser(userId: userId, key: "fcmToken", value: fcmToken)
             .mapError { ServiceError.error($0) }
             .eraseToAnyPublisher()
     }
