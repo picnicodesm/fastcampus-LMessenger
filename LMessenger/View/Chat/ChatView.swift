@@ -9,7 +9,6 @@ import SwiftUI
 import PhotosUI
 
 struct ChatView: View {
-    @EnvironmentObject var navigationRouter: NavigationRouter
     @StateObject var viewModel: ChatViewModel
     @FocusState private var isFocused: Bool
     
@@ -33,9 +32,9 @@ struct ChatView: View {
         .toolbar {
             ToolbarItemGroup(placement: .topBarLeading) {
                 Button {
-                    navigationRouter.pop()
+                    viewModel.send(action: .pop)
                 } label: {
-                    Image("back")
+                    Image("back", label: Text("뒤로가기"))
                 }
 
                 Text(viewModel.otherUser?.name ?? "대화방이름")

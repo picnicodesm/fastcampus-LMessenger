@@ -32,7 +32,7 @@ class Services: ServiceType {
     
     init() {
         self.authService = AuthenticationService()
-        self.userService = UserService(dbRepository: UserDBRepository())
+        self.userService = UserService(dbRepository: UserDBRepository(reference: DBReference()))
         self.contactService = ContactService()
         self.photoPickerService = PhotoPickerService()
         self.uploadService = UploadService(provider: UploadProvider())

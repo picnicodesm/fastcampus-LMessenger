@@ -10,7 +10,6 @@ import SwiftUI
 struct MainTabView: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
     @EnvironmentObject var container: DIContainer
-    @EnvironmentObject var navigationRouter: NavigationRouter
     @State private var selectedTab: MainTabType = .home
     
     var body: some View {
@@ -19,7 +18,7 @@ struct MainTabView: View {
                 Group {
                     switch tab {
                     case .home:
-                        HomeView(viewModel: .init(container: container, navigationRouter: navigationRouter, userId: authViewModel.userId ?? "")) // 조금 더 실전이면 옵셔널을 홈 뷰 진입 전 한 번 더 체크할만 함
+                        HomeView(viewModel: .init(container: container, userId: authViewModel.userId ?? "")) // 조금 더 실전이면 옵셔널을 홈 뷰 진입 전 한 번 더 체크할만 함
                     case .chat:
                         ChatListView(viewModel: .init(container: container, userId: authViewModel.userId ?? ""))
                     case .phone:
@@ -57,5 +56,4 @@ struct MainTabView: View {
     MainTabView()
         .environmentObject(container)
         .environmentObject(AuthenticationViewModel(container: container))
-        .environmentObject(navigationRouter)
 }
