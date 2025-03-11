@@ -12,6 +12,8 @@ struct MyProfileView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel: MyProfileViewModel
     
+    let profileUpdateClosure: (() -> ())?
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -50,6 +52,9 @@ struct MyProfileView: View {
             .task { // task modifier는 onAppear가 불리기 직전에 실행됨
                 await viewModel.getUser()
             }
+        }
+        .onReceive(viewModel.$userInfo) { _ in
+            profileUpdateClosure?()
         }
     }
     
@@ -107,5 +112,5 @@ struct MyProfileView: View {
 }
 
 #Preview {
-    MyProfileView(viewModel: .init(container: DIContainer(services: StubService()), userId: "user1_id"))
+    MyProfileView(viewModel: .init(container: DIContainer(services: StubService()), userId: "user1_id")) {}
 }

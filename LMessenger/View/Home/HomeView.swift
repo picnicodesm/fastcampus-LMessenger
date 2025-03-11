@@ -17,7 +17,9 @@ struct HomeView: View {
                 .fullScreenCover(item: $viewModel.modalDestination) {
                     switch $0 {
                     case .myProfile:
-                        MyProfileView(viewModel: .init(container: container, userId: viewModel.userId))
+                        MyProfileView(viewModel: .init(container: container, userId: viewModel.userId)) {
+                            viewModel.send(action: .updateUser)
+                        }
                     case let .otherProfile(userId):
                         OtherProfileView(viewModel: .init(container: container, userId: userId)) { otherUserInfo in
                             viewModel.send(action: .goToChat(otherUserInfo))
@@ -122,9 +124,13 @@ struct HomeView: View {
             
             Spacer()
             
-            Image("person")
+//            Image("person")
+//                .frame(width: 52, height: 52)
+//                .clipShape(Circle())
+            URLImageView(urlString: viewModel.myUser?.profileURL)
                 .frame(width: 52, height: 52)
                 .clipShape(Circle())
+            
         }
         .padding(.horizontal, 30)
         .onTapGesture {

@@ -11,6 +11,7 @@ class HomeViewModel: ObservableObject {
     
     enum Action {
         case load
+        case updateUser
         case requestContacts
         case presentView(HomeModalDestination)
         case goToChat(User)
@@ -52,6 +53,14 @@ class HomeViewModel: ObservableObject {
                     self?.users = users
                 }.store(in: &subscriptions)
             
+        case .updateUser:
+            container.services.userService.getUser(userId: userId)
+                .sink { completion in
+                    
+                } receiveValue: { [weak self] user in
+                    self?.myUser = user
+                }.store(in: &subscriptions)
+
         case .requestContacts:
             container.services.contactService.fetchContacts()
                 .flatMap { users in
