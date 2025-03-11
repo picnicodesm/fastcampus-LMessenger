@@ -56,6 +56,7 @@ struct HomeView: View {
                         Image("settings", label: Text("설정"))
                     }
                 }
+                .navigationBarTitleDisplayMode(.inline)
         case .fail:
             ErrorView()
         }
@@ -124,13 +125,9 @@ struct HomeView: View {
             
             Spacer()
             
-//            Image("person")
-//                .frame(width: 52, height: 52)
-//                .clipShape(Circle())
             URLImageView(urlString: viewModel.myUser?.profileURL)
                 .frame(width: 52, height: 52)
                 .clipShape(Circle())
-            
         }
         .padding(.horizontal, 30)
         .onTapGesture {
