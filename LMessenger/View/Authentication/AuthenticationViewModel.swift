@@ -50,7 +50,6 @@ class AuthenticationViewModel: ObservableObject {
             isLoading = true
             
             container.services.authService.signInWithGoogle()
-            // TODO: db
                 .flatMap { user in
                     self.container.services.userService.addUser(user)
                 }

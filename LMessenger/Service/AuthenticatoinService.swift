@@ -133,7 +133,7 @@ extension AuthenticationService {
         
         //        let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce) <- will be deprecated
         let credential = OAuthProvider.credential(providerID: .apple, idToken: idTokenString, rawNonce: nonce)
-        
+
         authenticateUserWithFirebase(credential: credential) { result in
             // user를 담는 부분이 파이어베이스에서 충분히 넘어오지 않기 때문에 이 클로저에서 채움?
             switch result {
@@ -192,3 +192,4 @@ class StubAuthenticationService: AuthenticationServiceType {
         Empty().eraseToAnyPublisher()
     }
 }
+

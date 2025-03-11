@@ -16,7 +16,7 @@ struct LMessengerApp: App {
         WindowGroup {
             AuthenticatedView(
                 authViewModel: .init(container: container)
-            ) // 이 구조는 뷰 또는 뷰모델을 테스트할 때 원하는 행태를 주입하여 테스트가 가능합니다.
+            ) // 이 구조는 뷰 또는 뷰모델을 테스트할 때 원하는 형태를 주입하여 테스트가 가능합니다.
                 .environmentObject(container)
                 .onAppear {
                     container.appearanceController.changeAppearance(AppearanceType(rawValue: appearanceValue))

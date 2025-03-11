@@ -126,3 +126,4 @@ class StubUserService: UserServiceType {
         Just([.stub1, .stub2]).setFailureType(to: ServiceError.self).eraseToAnyPublisher()
     }
 }
+
