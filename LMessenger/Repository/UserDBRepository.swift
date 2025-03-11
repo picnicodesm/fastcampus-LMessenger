@@ -44,8 +44,8 @@ class UserDBRepository: UserDBRepositoryType {
          user_id: [String: Any]
          user_id: [String: Any]
          */
-        // 스트림으로 users에 대한 정보를 딕셔너리화 할건데 우리는 이 앞에 유저 정보도 알아야 합니다.
-        // 그래서 zip의 첫 번째 스트림은 유저 벙보를 변환하지 않는 퍼블리셔, 그리고 두 번째 스트림은 변환을 하는 퍼블리셔. 이런 식으로 진행해보겠습니다.
+        // 스트림으로 users에 대한 정보를 딕셔너리화 할건데 이 앞에 유저 정보도 알아야 합니다.
+        // 그래서 zip의 첫 번째 스트림은 유저 정보를 변환하지 않는 퍼블리셔, 그리고 두 번째 스트림은 변환을 하는 퍼블리셔. 이런 식으로 진행.
         
         Publishers.Zip(users.publisher, users.publisher)
             .compactMap { origin, converted in
@@ -79,7 +79,6 @@ class UserDBRepository: UserDBRepositoryType {
                         .mapError { DBError.error($0) }
                         .eraseToAnyPublisher()
                 } else {
-                    // 유저에 대한 정보가 없을 때에는 실패가 맞으므로
                     return Fail(error: .emptyValue).eraseToAnyPublisher()
                 }
             }
@@ -110,7 +109,6 @@ class UserDBRepository: UserDBRepositoryType {
                     .eraseToAnyPublisher()
             } else if value == nil {
                 return Just([]).setFailureType(to: DBError.self).eraseToAnyPublisher()
-                // Just는 에러 타입이 Never라서 명시적으로 실패 타입을 지정해주기 위해 setFailureType 사용
             } else {
                 return Fail(error: .invalidatedType).eraseToAnyPublisher()
             }

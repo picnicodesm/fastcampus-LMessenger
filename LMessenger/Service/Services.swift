@@ -6,7 +6,6 @@
 
 import Foundation
 
-// 인증 서비스의 틀
 protocol ServiceType {
     var authService: AuthenticationServiceType { get set }
     var userService: UserServiceType { get set }

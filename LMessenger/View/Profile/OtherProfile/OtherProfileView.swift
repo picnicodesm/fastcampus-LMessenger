@@ -58,7 +58,6 @@ struct OtherProfileView: View {
         HStack(alignment: .top, spacing: 50) {
             ForEach(OtherProfileMenuType.allCases, id: \.self) { menu in
                 Button {
-                    // TODO:
                     if menu == .chat, let userInfo = viewModel.userInfo {
                         dismiss()
                         goToChat(userInfo)

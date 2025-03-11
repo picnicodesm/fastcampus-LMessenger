@@ -18,7 +18,7 @@ class DiskStorage: DiskStorageType {
     
     init(fileManager: FileManager = .default) {
         self.fileManager = fileManager
-        self.directoryURL = fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0].appendingPathComponent("ImageCache") // cache/Imagecache
+        self.directoryURL = fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0].appendingPathComponent("ImageCache")
         
         createDirectory()
     }

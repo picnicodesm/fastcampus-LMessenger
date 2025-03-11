@@ -34,10 +34,8 @@ struct LoginView: View {
             }.buttonStyle(LoginButtonStyle(textColor: .bkText, borderColor: .greyLight))
             
             SignInWithAppleButton { request in
-                // 인증요청시 불리는 클로저. 리퀘스트를 통해 원하는 정보와 nonce를 제공합니다.
                 authViewModel.send(action: .appleLogin(request))
             } onCompletion: { result in
-                // 인증이 완료되었을 때 불리는 클로저, result의 결과가 성공시 파이어베이스 인증 진행.
                 authViewModel.send(action: .appleLoginCompletion(result))
             }
             .frame(height: 40)

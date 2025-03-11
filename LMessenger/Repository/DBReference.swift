@@ -23,7 +23,6 @@ protocol DBReferenceType {
 class DBReference: DBReferenceType {
     
     var db: DatabaseReference = Database.database().reference()
-    // reference는 database에서 root 역할
     
     var observedHandlers: [UInt] = []
     
@@ -71,7 +70,6 @@ class DBReference: DBReferenceType {
         
         return Future<Any?, DBError> { [weak self] promise in
             self?.db.child(path).getData { error, snapshot in
-                // firebase에서 데이터를 조회하는 방법은 여러가지가 있는데 여기선 getData 사용
                 if let error {
                     promise(.failure(DBError.error(error)))
                 } else if snapshot?.value is NSNull {

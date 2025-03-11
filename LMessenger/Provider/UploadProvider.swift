@@ -20,7 +20,7 @@ protocol UploadProviderType {
 
 class UploadProvider: UploadProviderType {
     
-    let storageRef = Storage.storage().reference() // 클라우드의 파일을 가리키는 포인터
+    let storageRef = Storage.storage().reference()
     
     func upload(path: String, data: Data, fileName: String) -> AnyPublisher<URL, UploadError> {
         let ref = storageRef.child(path).child(fileName)

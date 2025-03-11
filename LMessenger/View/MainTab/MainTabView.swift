@@ -18,7 +18,7 @@ struct MainTabView: View {
                 Group {
                     switch tab {
                     case .home:
-                        HomeView(viewModel: .init(container: container, userId: authViewModel.userId ?? "")) // 조금 더 실전이면 옵셔널을 홈 뷰 진입 전 한 번 더 체크할만 함
+                        HomeView(viewModel: .init(container: container, userId: authViewModel.userId ?? ""))
                     case .chat:
                         ChatListView(viewModel: .init(container: container, userId: authViewModel.userId ?? ""))
                     case .phone:
@@ -38,16 +38,6 @@ struct MainTabView: View {
         UITabBar.appearance().unselectedItemTintColor = UIColor(Color.bkText)
     }
 }
-
-//struct MainTabView_Previews: PreviewProvider {
-//    static let container = DIContainer(services: StubService())
-//    
-//    static var previews: some View {
-//        MainTabView()
-//            .environmentObject(self.container)
-//            .environmentObject(AuthenticationViewModel(container: self.container))
-//    }
-//}
 
 #Preview {
     let container = DIContainer(services: StubService())

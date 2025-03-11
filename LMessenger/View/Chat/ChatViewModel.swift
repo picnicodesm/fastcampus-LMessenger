@@ -103,11 +103,6 @@ class ChatViewModel: ObservableObject {
                 }.store(in: &subscriptions)
             
         case let .uploadImage(pickerItem):
-            /*
-             1. data화
-             2. uploadService > storage
-             3. chat > add url
-             */
             guard let pickerItem else { return }
             
             container.services.photoPickerService.loadTransferable(from: pickerItem)
@@ -137,15 +132,3 @@ class ChatViewModel: ObservableObject {
         }
     }
 }
-/*
- Chats/
-    ChatRoomId/
-        chatId1/Chat
-        chatId1/Chat
-        chatId1/Chat
- 
- Chat Date > 2023.11.1
- Chat Date > 2023.11.1
- Chat Date > 2023.11.1
- Chat Date > 2023.11.3
- */

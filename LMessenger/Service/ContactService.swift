@@ -30,7 +30,7 @@ class ContactService: ContactServiceType {
     private func fetchContacts(completion: @escaping (Result<[User], Error>) -> Void) {
         let store = CNContactStore()
         
-        store.requestAccess(for: .contacts) { [weak self] granted, error in // info.plist에 권한 추가 해야 함.
+        store.requestAccess(for: .contacts) { [weak self] granted, error in 
             if let error {
                 completion(.failure(error))
                 return
