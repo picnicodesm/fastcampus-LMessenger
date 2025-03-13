@@ -62,6 +62,7 @@
 		0472ACFE2D6A3C130085A7B7 /* UserDBRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472ACFD2D6A3C130085A7B7 /* UserDBRepositoryTests.swift */; };
 		0472AD022D6A40190085A7B7 /* ChatRoomServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472AD012D6A40190085A7B7 /* ChatRoomServiceTests.swift */; };
 		0472AD052D6A42420085A7B7 /* ChatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472AD042D6A42420085A7B7 /* ChatViewModelTests.swift */; };
+		047A33362D82AB67009241E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047A33352D82AB67009241E0 /* GoogleService-Info.plist */; };
 		048460852D40A93100617EBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048460842D40A93100617EBF /* LaunchScreen.storyboard */; };
 		048460882D40AA4700617EBF /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048460872D40AA4700617EBF /* DIContainer.swift */; };
 		0484608B2D40AA7900617EBF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484608A2D40AA7900617EBF /* Services.swift */; };
@@ -170,6 +171,7 @@
 		0472ACFD2D6A3C130085A7B7 /* UserDBRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBRepositoryTests.swift; sourceTree = "<group>"; };
 		0472AD012D6A40190085A7B7 /* ChatRoomServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomServiceTests.swift; sourceTree = "<group>"; };
 		0472AD042D6A42420085A7B7 /* ChatViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModelTests.swift; sourceTree = "<group>"; };
+		047A33352D82AB67009241E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		048460832D40A8CF00617EBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		048460842D40A93100617EBF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		048460872D40AA4700617EBF /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -607,6 +609,7 @@
 				048460B12D42019600617EBF /* LMessenger.entitlements */,
 				723ABD862AFFF1B800C260F1 /* LMessengerApp.swift */,
 				048460952D40AEE200617EBF /* AppDelegate.swift */,
+				047A33352D82AB67009241E0 /* GoogleService-Info.plist */,
 				048460832D40A8CF00617EBF /* Info.plist */,
 				048460862D40AA3A00617EBF /* General */,
 				0472ACF72D69E7E50085A7B7 /* Dependency */,
@@ -750,6 +753,7 @@
 			files = (
 				723ABDB22AFFF1F000C260F1 /* Colors.xcassets in Resources */,
 				048460852D40A93100617EBF /* LaunchScreen.storyboard in Resources */,
+				047A33362D82AB67009241E0 /* GoogleService-Info.plist in Resources */,
 				723ABD8E2AFFF1B900C260F1 /* Preview Assets.xcassets in Resources */,
 				723ABD8B2AFFF1B900C260F1 /* Assets.xcassets in Resources */,
 			);
