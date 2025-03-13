@@ -68,7 +68,6 @@
 		0484608F2D40AB1400617EBF /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484608E2D40AB1400617EBF /* AuthenticationViewModel.swift */; };
 		048460942D40AE8E00617EBF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 048460932D40AE8E00617EBF /* FirebaseAuth */; };
 		048460962D40AEE200617EBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048460952D40AEE200617EBF /* AppDelegate.swift */; };
-		048460982D40AFCE00617EBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 048460972D40AFCE00617EBF /* GoogleService-Info.plist */; };
 		0484609A2D40B09800617EBF /* AuthenticatoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048460992D40B09800617EBF /* AuthenticatoinService.swift */; };
 		0484609E2D40B2A000617EBF /* LoginIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484609D2D40B2A000617EBF /* LoginIntroView.swift */; };
 		048460A02D40B2A900617EBF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484609F2D40B2A900617EBF /* MainTabView.swift */; };
@@ -177,7 +176,6 @@
 		0484608A2D40AA7900617EBF /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		0484608E2D40AB1400617EBF /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		048460952D40AEE200617EBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		048460972D40AFCE00617EBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		048460992D40B09800617EBF /* AuthenticatoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatoinService.swift; sourceTree = "<group>"; };
 		0484609D2D40B2A000617EBF /* LoginIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginIntroView.swift; sourceTree = "<group>"; };
 		0484609F2D40B2A900617EBF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -609,7 +607,6 @@
 				048460B12D42019600617EBF /* LMessenger.entitlements */,
 				723ABD862AFFF1B800C260F1 /* LMessengerApp.swift */,
 				048460952D40AEE200617EBF /* AppDelegate.swift */,
-				048460972D40AFCE00617EBF /* GoogleService-Info.plist */,
 				048460832D40A8CF00617EBF /* Info.plist */,
 				048460862D40AA3A00617EBF /* General */,
 				0472ACF72D69E7E50085A7B7 /* Dependency */,
@@ -751,7 +748,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				048460982D40AFCE00617EBF /* GoogleService-Info.plist in Resources */,
 				723ABDB22AFFF1F000C260F1 /* Colors.xcassets in Resources */,
 				048460852D40A93100617EBF /* LaunchScreen.storyboard in Resources */,
 				723ABD8E2AFFF1B900C260F1 /* Preview Assets.xcassets in Resources */,
